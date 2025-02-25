@@ -1,4 +1,3 @@
-import java.util.*;
 class Area{
     static float area(float r){
         return (float)(3.14f*r*r);
