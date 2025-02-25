@@ -38,5 +38,6 @@ public class addLargestAddition {
         
         String sum = addLargeNumbers(num1, num2);
         System.out.println("Sum: " + sum);
+        scn.close();
     }
 }
