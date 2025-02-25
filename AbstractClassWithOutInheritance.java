@@ -6,6 +6,7 @@ abstract class Circle{
     static void getval(){
         Scanner in = new Scanner(System.in);
         r = in.nextDouble();
+        in.close();
     }
     
     static void calc_area(){
