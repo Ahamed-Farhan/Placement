@@ -4,7 +4,7 @@ public class Armstrong
 	public static void main(String[] args) {
 	    Scanner scn = new Scanner(System.in);
 		int temp = scn.nextInt();
-		int dup = temp;
+        scn.close();
 		int oddsum=0,evensum=0,primesum=0;
 		int digit;
 		while(temp>0){
