@@ -1,0 +1,87 @@
+import java.util.*;
+
+
+/*class AbundantArray{
+    int ab_count = 0;
+    void result(int arr[][], int r, int c){
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                if(abundant(arr[i][j]))
+                    count++;
+            }
+        }
+        if(count%2==0)
+            System.out.println("YES" + "Abundant Count in the matrix are : " + count);
+        else
+            System.out.println("NO");
+    }
+    
+    boolean abundant(int i){
+        int abu = 0;
+        boolean  cab = false;
+        for(int j=1;j<i;j++){
+            if(i%j==0){
+                abu = abu + j;
+                if(abu>i) break;
+            }
+        }
+        if(abu>i)
+            cab = true;
+        return cab;
+    }
+}*/
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scn = new Scanner(System.in);
+        System.out.print("Enter no.of Rows and Columns : ");
+        int r = scn.nextInt();
+        int c = scn.nextInt();
+        int arr[][] = new int[r][c];
+        int ab_count = 0;
+        System.out.println("Enter Matrix Values : ");
+        for(int i =0;i<r;i++){
+            for(int j =0;j<c;j++){
+                arr[i][j]=scn.nextInt();
+                while(count(arr[i][j])<4){
+                    System.out.println("Number should be greater than 3 digit...\nPlease enter again");
+                    arr[i][j]=scn.nextInt();
+                }
+            }
+        }
+        result(arr,r,c);
+	}
+	static int count(int a){
+	    int temp = Integer.toString(a).length();
+	    return temp;
+	}
+	
+	static void result(int arr[][], int r, int c){
+	    int count = 0;
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                if(abundant(arr[i][j]))
+                    count++;
+            }
+        }
+        if(count%2==0)
+            System.out.println("YES" + "Abundant Count in the matrix are : " + count);
+        else
+            System.out.println("NO");
+    }
+    
+    static boolean abundant(int i){
+        int abu = 0;
+        boolean  cab = false;
+        for(int j=1;j<i;j++){
+            if(i%j==0){
+                abu = abu + j;
+                if(abu>i) break;
+            }
+        }
+        if(abu>i)
+            cab = true;
+        return cab;
+    }
+}
